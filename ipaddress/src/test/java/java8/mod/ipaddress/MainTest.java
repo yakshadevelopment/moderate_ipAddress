@@ -16,5 +16,14 @@ import static java8.mod.ipaddress.TestUtils.*
 		yakshaAssert(currentTest(),Main.checkIpAddress("128.25b.143.196")?"true":"false",businessTestFile);
 		yakshaAssert(currentTest(), Main.checkIpAddress("128.254.143.196.")?"true":"false",businessTestFile);
 	}
+	@Test
+    public void testExceptionConditon() throws Exception{
+	 yakshaAssert(currentTest(),true,boundaryTestFile);
+      }
+
+	@Test
+	public void testBoundaryCondition() throws Exception {
+	  yakshaAssert(currentTest(),true,exceptionTestFile);
+   }
 
 }
